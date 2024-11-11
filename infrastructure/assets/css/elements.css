@@ -1,0 +1,129 @@
+/* Estilos específicos para a página Sandbox */
+.sandbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../images/vava.png'); /* Caminho para a imagem de fundo */
+    background-repeat: no-repeat; /*Impede que a imagem de fundo se repita */
+    background-size: cover; /* Redimensiona a imagem para cobrir a área */
+    background-position: center; /* Centraliza a imagem de fundo */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Estilo para o título principal */
+.sandbox h1 {
+    color: #007acc; /* Azul claro */
+    font-size: 2.5em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Estilo para o subtítulo */
+.sandbox h2 {
+    color: #005b99; /* Azul escuro */
+    font-size: 1.5em;
+    margin: 15px 0;
+    text-align: center;
+}
+
+/* Seção geral com borda e sombreamento */
+.sandbox section {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Estilo para os elementos de áudio e vídeo */
+.sandbox iframe {
+    margin-top: 10px;
+    border: 2px solid #007acc;
+    border-radius: 8px;
+    width: 800px; /* Largura fixa */
+    height: 450px; /* Altura fixa */
+    max-width: 100%;
+    height: auto;
+}
+
+.sandbox audio {
+    margin-top: 10px;
+    border: 2px solid #007acc;
+    border-radius: 8px;
+    width: 100%; /* Mantém o elemento ocupando a largura disponível */
+    max-width: 600px; /* Limita a largura máxima se necessário */
+    display: block; /* Certifique-se de que o elemento seja um bloco */
+}
+
+/* Estilo para o link da página principal */
+.sandbox a {
+    color: #007acc;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+    transition: color 0.3s ease;
+    font-size: 1.1em;
+}
+
+.palette h2 {
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.sandbox a:hover {
+    color: #005b99;
+    text-decoration: underline;
+}
+
+/* Estilo para a seção da paleta de cores */
+.sandbox .palette {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #081420; /* Azul escuro para o fundo da paleta */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(43, 0, 0, 0.2);
+}
+
+/* Estilos para os tons de azul da paleta */
+.palette-color {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+/* Azul claro */
+.palette-blue-light {
+    background-color: #007acc;
+}
+
+/* Azul escuro */
+.palette-blue-dark {
+    background-color: #005b99;
+}
+
+/* Branco */
+.palette-white {
+    background-color: #e9e9e9;
+}
+/* Responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+    .sandbox h1 {
+        font-size: 2em;
+    }
+
+    .sandbox h2 {
+        font-size: 1.2em;
+    }
+
+    .sandbox section {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,196 @@
+/* Estilos gerais */
+body {
+    display: flex;
+    flex-direction:column; /*Organiza o conteúdo em coluna */
+    min-height: 100vh; /* Faz o body ocupar toda a altura da tela */
+    margin: 0;
+}
+
+/* Cabeçalho */
+.header-container {
+    background-color: #007acc;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-grow: 1; /* Faz com que o main ocupe o restante do espaço disponível */
+}
+/* Navegação principal */
+.main-navigation {
+    background-color: #005b99;
+    padding: 10px;
+    text-align: center;
+}
+
+.main-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-navigation li {
+    margin: 0 15px;
+}
+
+.main-navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-navigation a:hover {
+    color: #ffcc00;
+}
+
+/* Para o container dentro do main */
+
+/* Para o main-container */
+.main-container {
+    margin-left: 25%; /* Cria o espaço à esquerda para o aside */
+    padding: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+    align-items: center;
+    height: auto;
+    width: 75%; /* Largura do main-container */
+}
+
+/* Links principais */
+/* Para garantir que os links fiquem um abaixo do outro */
+.links {
+    display: flex;
+    flex-direction: column; /* Alinha os links na vertical */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.links a:hover {
+    color: #005b99;
+}
+
+.links a:hover {
+    color: #005b99;
+}
+
+/* Artigo */
+.content {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+    color: #666;
+}
+
+.date {
+    font-style: italic;
+    color: #888;
+}
+
+.date .highlight {
+    color: #007acc;
+    font-weight: bold;
+}
+
+/* Barra lateral */
+aside {
+    height: 83vh;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 13%;
+    border-right: 2px solid #ddd;
+    position: fixed;
+    left: 0; /* Posiciona o aside à esquerda */
+    bottom: 0; /* Garantir que o aside vá até o fundo da tela */
+}
+
+.aside-container h3 {
+    color: #007acc;
+    margin-top: 0;
+}
+
+.aside-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.aside-container ul li {
+    margin-bottom: 10px;
+}
+
+/* Isso garante que os links fiquem empilhados um abaixo do outro */
+.aside-container ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block; /* Isso força os links a ficarem um embaixo do outro */
+}
+
+.aside-container ul li a:hover {
+    color: #007acc;
+}
+
+
+/* Rodapé */
+footer {
+    position: absolute; /* Fixar o rodapé no fundo da tela */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 992px) {
+    aside {
+        width: 30%;
+    }
+    .main-container {
+        margin-left: 30%;
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    aside {
+        width: 35%;
+    }
+    .main-container {
+        margin-left: 35%;
+        width: 65%;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Ajuste para telas menores (mobile) */
+    aside {
+        position: static; /* Posiciona o aside em fluxo normal */
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #ddd;
+    }
+}
