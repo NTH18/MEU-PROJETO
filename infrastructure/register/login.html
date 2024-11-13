@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define o idioma da página como Português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva para dispositivos móveis -->
+    <title>Login</title> <!-- Título da página que aparece na aba do navegador -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon"> <!-- Ícone que aparece na aba do navegador -->
+    <link rel="stylesheet" href="../assets/css/login.css"> <!-- Link para o arquivo CSS que estiliza a página -->
+</head>
+
+<body>
+    <div class="container"> <!-- Container principal que envolve todo o conteúdo da página -->
+        <h2>Login</h2> <!-- Título da seção de login -->
+
+        <!-- Formulário de login -->
+        <form action="../register/tabela.html" method="get"> <!-- Formulário que redireciona para tabela.html após o envio -->
+            <input type="email" placeholder="Digite seu e-mail" required> <!-- Campo de entrada de e-mail, obrigatório, com validação de formato de e-mail -->
+            <input type="password" placeholder="Digite sua senha" required 
+                   pattern=".{6,18}" 
+                   title="A senha deve ter entre 6 e 18 caracteres."> <!-- Mensagem de ajuda exibida em caso de falha na validação -->
+            <button type="submit">Entrar</button> <!-- Botão de envio do formulário -->
+        </form>
+
+        <!-- Seção para login social -->
+        <div class="social-login">
+            <p>Ou entre com:</p> <!-- Texto que introduz as opções de login social -->
+            <a href=""> <!-- Link de login com o Google -->
+                <img src="../assets/images/google.png" alt="Login com Google"> <!-- Imagem de login com o Google -->
+            </a>
+            <a href=""> <!-- Link de login com o Facebook -->
+                <img src="../assets/images/facebook.png" alt="Login com Facebook"> <!-- Imagem de login com o Facebook -->
+            </a>
+            <a href=""> <!-- Link de login com a Apple -->
+                <img src="../assets/images/apple.png" alt="Login com Apple"> <!-- Imagem de login com a Apple -->
+            </a>
+        </div>
+
+        <!-- Seção de rodapé -->
+        <div class="footer">
+            <p>Não tem uma conta? <a href="../register/cadastro.html">Cadastre-se aqui</a></p> <!-- Link para a página de cadastro -->
+        </div>
+    </div>
+</body>
+
+</html>

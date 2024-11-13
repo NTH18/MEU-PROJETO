@@ -1,196 +1,238 @@
 /* Estilos gerais */
 body {
-    display: flex;
-    flex-direction:column; /*Organiza o conteúdo em coluna */
-    min-height: 100vh; /* Faz o body ocupar toda a altura da tela */
-    margin: 0;
+    display: flex; /* Define que o conteúdo do body será exibido em um contêiner flex */
+    flex-direction: column; /* Organiza o conteúdo em uma coluna vertical */
+    min-height: 100vh; /* Faz o body ocupar no mínimo toda a altura da janela */
+    margin: 0; /* Remove a margem padrão do body */
 }
 
 /* Cabeçalho */
 .header-container {
-    background-color: #007acc;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+    background-color: #007acc; /* Define a cor de fundo azul */
+    color: #fff; /* Define a cor do texto como branca */
+    padding: 20px; /* Adiciona espaçamento interno */
+    text-align: center; /* Centraliza o texto */
 }
 
 header h1 {
-    margin: 0;
+    margin: 0; /* Remove a margem ao redor do título */
+}
+
+.login-link {
+    color: #ffffff; /* Cor do texto branca */
+    background-color: #357abd; /* Cor de fundo azul mais escuro */
+    text-decoration: none; /* Remove sublinhado */
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
+    transition: background-color 0.3s, transform 0.2s; /* Animações para hover e clique */
+}
+
+/* Efeitos de hover e active para o link de login */
+.login-link:hover {
+    background-color: #285a8d; /* Muda a cor de fundo ao passar o mouse */
+}
+
+.login-link:active {
+    transform: scale(0.98); /* Reduz ligeiramente o tamanho ao clicar */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Alinha o conteúdo em coluna */
+        align-items: flex-start; /* Alinha à esquerda */
+    }
+
+    .login-link {
+        margin-top: 10px; /* Adiciona margem superior */
+        width: 100%; /* Faz o link ocupar toda a largura */
+        text-align: center; /* Centraliza o texto */
+    }
 }
 
 main {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    flex-grow: 1; /* Faz com que o main ocupe o restante do espaço disponível */
+    display: flex; /* Define um contêiner flex */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    flex-grow: 1; /* Faz com que o main ocupe o espaço restante disponível */
 }
+
 /* Navegação principal */
 .main-navigation {
-    background-color: #005b99;
-    padding: 10px;
-    text-align: center;
+    background-color: #005b99; /* Cor de fundo azul escuro */
+    padding: 10px; /* Adiciona espaçamento interno */
+    text-align: center; /* Centraliza o texto */
 }
 
 .main-navigation ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+    list-style: none; /* Remove as bolinhas da lista */
+    padding: 0; /* Remove o espaçamento interno */
+    margin: 0; /* Remove a margem */
+    display: flex; /* Exibe os itens da lista em linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
 }
 
 .main-navigation li {
-    margin: 0 15px;
+    margin: 0 15px; /* Adiciona margem horizontal entre os itens */
 }
 
 .main-navigation a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+    color: #fff; /* Cor do texto branca */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Texto em negrito */
 }
 
 .main-navigation a:hover {
-    color: #ffcc00;
+    color: #ffcc00; /* Muda a cor do texto ao passar o mouse */
 }
 
-/* Para o container dentro do main */
-
-/* Para o main-container */
+/* Container principal dentro do main */
 .main-container {
-    margin-left: 25%; /* Cria o espaço à esquerda para o aside */
-    padding: 20px;
-    background-color: #fff;
-    box-sizing: border-box;
-    align-items: center;
-    height: auto;
-    width: 75%; /* Largura do main-container */
+    margin-left: 25%; /* Cria espaço à esquerda para o aside */
+    padding: 20px; /* Adiciona espaçamento interno */
+    background-color: #fff; /* Cor de fundo branca */
+    box-sizing: border-box; /* Inclui o padding no tamanho total */
+    align-items: center; /* Centraliza os itens verticalmente */
+    height: auto; /* Altura automática */
+    width: 75%; /* Largura do container principal */
 }
 
 /* Links principais */
-/* Para garantir que os links fiquem um abaixo do outro */
 .links {
-    display: flex;
-    flex-direction: column; /* Alinha os links na vertical */
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    display: flex; /* Exibe os links em um contêiner flex */
+    flex-direction: column; /* Alinha os links verticalmente */
+    gap: 20px; /* Espaçamento entre os links */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    margin-top: 20px; /* Adiciona margem superior */
 }
 
 .links a:hover {
-    color: #005b99;
-}
-
-.links a:hover {
-    color: #005b99;
+    color: #005b99; /* Muda a cor do texto ao passar o mouse */
 }
 
 /* Artigo */
 .content {
-    max-width: 600px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Define a largura máxima */
+    background-color: #fff; /* Cor de fundo branca */
+    padding: 20px; /* Adiciona espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
 }
 
 .intro-text {
-    color: #666;
+    color: #666; /* Cor de texto cinza */
 }
 
 .date {
-    font-style: italic;
-    color: #888;
+    font-style: italic; /* Texto em itálico */
+    color: #888; /* Cor de texto cinza claro */
 }
 
 .date .highlight {
-    color: #007acc;
-    font-weight: bold;
+    color: #007acc; /* Destaque com cor azul */
+    font-weight: bold; /* Texto em negrito */
 }
 
 /* Barra lateral */
 aside {
-    height: 83vh;
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 13%;
-    border-right: 2px solid #ddd;
-    position: fixed;
-    left: 0; /* Posiciona o aside à esquerda */
-    bottom: 0; /* Garantir que o aside vá até o fundo da tela */
+    height: 83vh; /* Altura de 83% da altura da janela */
+    background-color: #f8f8f8; /* Cor de fundo cinza claro */
+    padding: 20px; /* Adiciona espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    width: 13%; /* Largura da barra lateral */
+    border-right: 2px solid #ddd; /* Borda direita */
+    position: fixed; /* Posiciona a barra lateral fixa */
+    left: 0; /* Posiciona à esquerda */
+    bottom: 0; /* Faz com que vá até o fundo da tela */
 }
 
 .aside-container h3 {
-    color: #007acc;
-    margin-top: 0;
+    color: #007acc; /* Cor do título azul */
+    margin-top: 0; /* Remove margem superior */
 }
 
 .aside-container ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* Remove as bolinhas da lista */
+    padding: 0; /* Remove o espaçamento interno */
 }
 
 .aside-container ul li {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Adiciona margem inferior entre os itens */
 }
 
-/* Isso garante que os links fiquem empilhados um abaixo do outro */
 .aside-container ul li a {
-    text-decoration: none;
-    color: #333;
-    display: block; /* Isso força os links a ficarem um embaixo do outro */
+    text-decoration: none; /* Remove sublinhado */
+    color: #333; /* Cor do texto cinza escuro */
+    display: block; /* Exibe os links como blocos */
 }
 
 .aside-container ul li a:hover {
-    color: #007acc;
+    color: #007acc; /* Muda a cor do texto ao passar o mouse */
 }
-
 
 /* Rodapé */
 footer {
     position: absolute; /* Fixar o rodapé no fundo da tela */
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+    bottom: 0; /* Posiciona no fundo da página */
+    width: 100%; /* Largura total */
+    text-align: center; /* Centraliza o texto */
+    background-color: #333; /* Cor de fundo cinza escuro */
+    color: #fff; /* Cor do texto branca */
+    padding: 10px; /* Adiciona espaçamento interno */
 }
+
 footer p {
-    margin: 0;
-    font-size: 14px;
+    margin: 0; /* Remove a margem */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Login social */
+.social-login {
+    text-align: center; /* Centraliza o conteúdo */
+    margin-top: 20px; /* Adiciona margem superior */
+}
+
+.social-login a {
+    margin: 0 10px; /* Adiciona margem horizontal entre os ícones */
+}
+
+.social-login img {
+    width: 40px; /* Define a largura da imagem */
+    height: auto; /* Ajusta a altura automaticamente */
+    vertical-align: middle; /* Alinha verticalmente no meio */
 }
 
 /* Media Queries para responsividade */
 @media (max-width: 992px) {
     aside {
-        width: 30%;
+        width: 30%; /* Aumenta a largura do aside */
     }
     .main-container {
-        margin-left: 30%;
-        width: 70%;
+        margin-left: 30%; /* Ajusta a margem esquerda */
+        width: 70%; /* Ajusta a largura do container principal */
     }
 }
 
 @media (max-width: 768px) {
     aside {
-        width: 35%;
+        width: 35%; /* Aumenta a largura do aside */
     }
     .main-container {
-        margin-left: 35%;
-        width: 65%;
+        margin-left: 35%; /* Ajusta a margem esquerda */
+        width: 65%; /* Ajusta a largura do container principal */
     }
 }
 
 @media (max-width: 576px) {
     /* Ajuste para telas menores (mobile) */
     aside {
-        position: static; /* Posiciona o aside em fluxo normal */
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 2px solid #ddd;
+        position: static; /* Remove a posição fixa */
+        width: 100%; /* O aside ocupa a largura total */
+        height: auto; /* Altura ajustada automaticamente */
+        border-right: none; /* Remove a borda direita */
+        border-bottom: 2px solid #ddd; /* Adiciona borda inferior */
     }
 }

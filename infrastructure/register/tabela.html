@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define o idioma da página como Português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Torna a página responsiva em dispositivos móveis -->
+    <title>Tabela</title> <!-- Título da página que aparece na aba do navegador -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Ícone que aparece na aba do navegador -->
+    <link rel="stylesheet" href="../assets/css/tabela.css"> <!-- Link para o arquivo CSS que estiliza a página -->
+</head>
+
+<body>
+    <div class="container"> <!-- Container principal para organizar o layout da página -->
+        <h2>Usuários Cadastrados</h2> <!-- Título da página -->
+
+        <!-- Barra de Pesquisa com Botão -->
+        <div class="search-container"> <!-- Div que contém a barra de pesquisa e o botão -->
+            <input type="text" id="search" placeholder="Pesquisar por nome ou código de login">
+            <!-- Campo de entrada para pesquisa -->
+            <button id="search-btn">Pesquisar</button> <!-- Botão para iniciar a pesquisa -->
+        </div>
+
+        <!-- Botão para cadastrar usuários -->
+        <div class="add-user-container"> <!-- Div que contém o botão de cadastro -->
+            <button id="add-user-btn">Cadastrar Usuário</button> <!-- Botão para adicionar um novo usuário -->
+        </div>
+
+        <table> <!-- Início da tabela -->
+            <thead> <!-- Cabeçalho da tabela -->
+                <tr>
+                    <th>Nome</th> <!-- Coluna para o nome do usuário -->
+                    <th>Código de Login</th> <!-- Coluna para o código de login -->
+                    <th>Descrição</th> <!-- Coluna para a descrição do usuário -->
+                    <th>Fornecedor</th> <!-- Coluna para o fornecedor associado -->
+                    <th>Ações</th> <!-- Coluna para botões de ações (editar/excluir) -->
+                </tr>
+            </thead>
+            <tbody> <!-- Corpo da tabela onde os dados dos usuários são exibidos -->
+                <!-- Exemplo de uma linha de dados -->
+                <tr>
+                    <td>Nathan Barreto</td> <!-- Nome do usuário -->
+                    <td>12345</td> <!-- Código de login do usuário -->
+                    <td>Administrador do sistema</td> <!-- Descrição do usuário -->
+                    <td>Fornecedor XYZ</td> <!-- Nome do fornecedor associado -->
+                    <td>
+                        <button class="edit-btn">Editar</button> <!-- Botão para editar o registro -->
+                        <button class="delete-btn">Excluir</button> <!-- Botão para excluir o registro -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jonatas Profundo</td> <!-- Nome do usuário -->
+                    <td>67890</td> <!-- Código de login do usuário -->
+                    <td>Assistente de TI</td> <!-- Descrição do usuário -->
+                    <td>Fornecedor ABC</td> <!-- Nome do fornecedor associado -->
+                    <td>
+                        <button class="edit-btn">Editar</button> <!-- Botão para editar o registro -->
+                        <button class="delete-btn">Excluir</button> <!-- Botão para excluir o registro -->
+                    </td>
+                </tr>
+                <!-- Mais linhas podem ser adicionadas aqui -->
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

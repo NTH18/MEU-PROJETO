@@ -1,0 +1,111 @@
+/* Estilização geral */
+body {
+    display: flex; /* Exibe o conteúdo do body como um contêiner flex */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Define a altura do body para ocupar 100% da altura da janela */
+    background-color: #f0f8ff; /* Cor de fundo azul claro para um visual acolhedor */
+    margin: 0; /* Remove a margem padrão */
+    font-family: 'Roboto', sans-serif; /* Define a fonte padrão */
+}
+
+/* Container do formulário */
+.container {
+    width: 100%; /* Define a largura do contêiner para ocupar 100% do espaço pai */
+    max-width: 400px; /* Define a largura máxima para manter a responsividade */
+    padding: 30px; /* Adiciona espaçamento interno */
+    background-color: #ffffff; /* Cor de fundo branca */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Adiciona sombra para um efeito de elevação */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px; /* Adiciona margem ao redor do contêiner */
+}
+
+/* Título */
+h2 {
+    margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+    font-size: 1.8em; /* Define o tamanho da fonte */
+    color: #333; /* Cor do texto cinza escuro */
+}
+
+/* Inputs de formulário */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Faz os inputs ocuparem toda a largura do contêiner */
+    padding: 12px; /* Adiciona espaçamento interno */
+    margin: 10px 0; /* Adiciona margem acima e abaixo */
+    border: 1px solid #ccc; /* Adiciona uma borda cinza clara */
+    border-radius: 6px; /* Bordas arredondadas */
+    font-size: 1em; /* Define o tamanho da fonte */
+    box-sizing: border-box; /* Inclui o padding e a borda no tamanho total */
+    transition: border-color 0.3s; /* Transição suave para a mudança de cor da borda */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #4a90e2; /* Cor de destaque azul quando o input está focado */
+    outline: none; /* Remove a borda de foco padrão */
+}
+
+/* Botão de envio */
+button {
+    width: 100%; /* Faz o botão ocupar toda a largura do contêiner */
+    padding: 12px; /* Adiciona espaçamento interno */
+    background-color: #4a90e2; /* Cor de fundo azul */
+    border: none; /* Remove a borda */
+    color: #fff; /* Cor do texto branca */
+    border-radius: 6px; /* Bordas arredondadas */
+    font-size: 1em; /* Define o tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Mostra o ponteiro de clique */
+    margin-top: 15px; /* Adiciona margem superior */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave para hover e clique */
+}
+
+button:hover {
+    background-color: #357abd; /* Muda a cor de fundo ao passar o mouse */
+}
+
+button:active {
+    transform: scale(0.98); /* Reduz ligeiramente o botão ao clicar */
+}
+
+/* Rodapé */
+.footer {
+    margin-top: 15px; /* Adiciona margem superior */
+    font-size: 0.9em; /* Define o tamanho da fonte */
+    color: #555; /* Cor do texto cinza */
+}
+
+/* Estilização de login social */
+.social-login {
+    text-align: center; /* Centraliza o conteúdo */
+    margin-top: 20px; /* Adiciona margem superior */
+}
+
+.social-login a {
+    margin: 0 10px; /* Adiciona margem horizontal */
+}
+
+.social-login img {
+    width: 40px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    vertical-align: middle; /* Alinha verticalmente no meio */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px; /* Reduz o padding em telas menores */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Reduz o tamanho da fonte do título em telas menores */
+    }
+
+    button {
+        padding: 10px; /* Reduz o padding do botão */
+    }
+}
