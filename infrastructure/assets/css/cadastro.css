@@ -1,111 +1,136 @@
-/* Estilização geral */
+/* Estilização geral - Mobile First */
 body {
-    display: flex; /* Exibe o conteúdo do body como um contêiner flex */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    height: 100vh; /* Define a altura do body para ocupar 100% da altura da janela */
-    background-color: #f0f8ff; /* Cor de fundo azul claro para um visual acolhedor */
-    margin: 0; /* Remove a margem padrão */
-    font-family: 'Roboto', sans-serif; /* Define a fonte padrão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Container do formulário */
 .container {
-    width: 100%; /* Define a largura do contêiner para ocupar 100% do espaço pai */
-    max-width: 400px; /* Define a largura máxima para manter a responsividade */
-    padding: 30px; /* Adiciona espaçamento interno */
-    background-color: #ffffff; /* Cor de fundo branca */
-    border-radius: 12px; /* Bordas arredondadas */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Adiciona sombra para um efeito de elevação */
-    text-align: center; /* Centraliza o texto */
-    margin: 20px; /* Adiciona margem ao redor do contêiner */
+    width: 90%; /* Largura inicial de 90% */
+    max-width: 400px;
+    padding: 20px; /* Padding reduzido para telas menores */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra mais leve para menor impacto */
+    text-align: center;
+    margin: 10px;
 }
 
 /* Título */
 h2 {
-    margin-bottom: 20px; /* Adiciona espaço abaixo do título */
-    font-size: 1.8em; /* Define o tamanho da fonte */
-    color: #333; /* Cor do texto cinza escuro */
+    margin-bottom: 15px;
+    font-size: 1.5em; /* Tamanho reduzido para mobile */
+    color: #333;
 }
 
 /* Inputs de formulário */
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: 100%; /* Faz os inputs ocuparem toda a largura do contêiner */
-    padding: 12px; /* Adiciona espaçamento interno */
-    margin: 10px 0; /* Adiciona margem acima e abaixo */
-    border: 1px solid #ccc; /* Adiciona uma borda cinza clara */
-    border-radius: 6px; /* Bordas arredondadas */
-    font-size: 1em; /* Define o tamanho da fonte */
-    box-sizing: border-box; /* Inclui o padding e a borda no tamanho total */
-    transition: border-color 0.3s; /* Transição suave para a mudança de cor da borda */
+    width: 100%;
+    padding: 10px; /* Padding menor para mobile */
+    margin: 8px 0; /* Menor espaçamento */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9em; /* Fonte menor para inputs */
+    box-sizing: border-box;
+    transition: border-color 0.3s;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-    border-color: #4a90e2; /* Cor de destaque azul quando o input está focado */
-    outline: none; /* Remove a borda de foco padrão */
+    border-color: #4a90e2;
+    outline: none;
 }
 
 /* Botão de envio */
 button {
-    width: 100%; /* Faz o botão ocupar toda a largura do contêiner */
-    padding: 12px; /* Adiciona espaçamento interno */
-    background-color: #4a90e2; /* Cor de fundo azul */
-    border: none; /* Remove a borda */
-    color: #fff; /* Cor do texto branca */
-    border-radius: 6px; /* Bordas arredondadas */
-    font-size: 1em; /* Define o tamanho da fonte */
-    font-weight: bold; /* Texto em negrito */
-    cursor: pointer; /* Mostra o ponteiro de clique */
-    margin-top: 15px; /* Adiciona margem superior */
-    transition: background-color 0.3s, transform 0.2s; /* Transição suave para hover e clique */
+    width: 100%;
+    padding: 10px; /* Menor padding para mobile */
+    background-color: #4a90e2;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px; /* Menor espaçamento */
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #357abd; /* Muda a cor de fundo ao passar o mouse */
+    background-color: #357abd;
 }
 
 button:active {
-    transform: scale(0.98); /* Reduz ligeiramente o botão ao clicar */
+    transform: scale(0.98);
 }
 
 /* Rodapé */
 .footer {
-    margin-top: 15px; /* Adiciona margem superior */
-    font-size: 0.9em; /* Define o tamanho da fonte */
-    color: #555; /* Cor do texto cinza */
+    margin-top: 10px;
+    font-size: 0.8em; /* Fonte menor */
+    color: #555;
 }
 
 /* Estilização de login social */
 .social-login {
-    text-align: center; /* Centraliza o conteúdo */
-    margin-top: 20px; /* Adiciona margem superior */
+    text-align: center;
+    margin-top: 15px; /* Menor margem */
 }
 
 .social-login a {
-    margin: 0 10px; /* Adiciona margem horizontal */
+    margin: 0 8px; /* Menor margem horizontal */
 }
 
 .social-login img {
-    width: 40px; /* Define a largura da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    vertical-align: middle; /* Alinha verticalmente no meio */
+    width: 35px; /* Imagens menores */
+    height: auto;
+    vertical-align: middle;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
+/* Media queries para telas maioress */
+@media (min-width: 600px) {
     .container {
-        padding: 20px; /* Reduz o padding em telas menores */
+        padding: 25px; /* Aumenta o padding */
     }
 
     h2 {
-        font-size: 1.5em; /* Reduz o tamanho da fonte do título em telas menores */
+        font-size: 1.8em; /* Título maior */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: 1em; /* Fonte maior para inputs */
     }
 
     button {
-        padding: 10px; /* Reduz o padding do botão */
+        padding: 12px; /* Aumenta o padding */
+    }
+
+    .footer {
+        font-size: 0.9em; /* Fonte maior */
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 500px; /* Aumenta a largura máxima */
+        padding: 30px; /* Padding maior */
+    }
+
+    h2 {
+        font-size: 2em; /* Título ainda maior */
+    }
+
+    button {
+        padding: 15px; /* Padding maior */
     }
 }

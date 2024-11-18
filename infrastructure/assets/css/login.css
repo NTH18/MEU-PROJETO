@@ -104,7 +104,7 @@ button:active {
     vertical-align: middle;
 }
 
-/* Media queries para telas maiores */
+/* Media queries para telas maioress */
 @media (min-width: 600px) {
     body {
         flex-direction: row; /* Exibe o conteúdo em linha para telas maiores */
