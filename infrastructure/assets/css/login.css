@@ -1,104 +1,153 @@
-/* Estilização geral */
+/* Estilização geral para mobile first */
 body {
-    display: flex; /* Define a exibição do body como flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Ocupa a altura total da janela de visualização */
-    background-color: #f0f8ff; /* Define a cor de fundo */
-    margin: 0; /* Remove a margem padrão */
-    font-family: 'Roboto', sans-serif; /* Define a fonte do texto */
+    display: flex;
+    flex-direction: column; /* Coloca o conteúdo em coluna */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f8ff;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Container do formulário */
 .container {
-    width: 100%; /* Largura total */
-    max-width: 400px; /* Largura máxima de 400px */
-    padding: 30px; /* Espaçamento interno */
-    background-color: #ffffff; /* Cor de fundo branca */
-    border-radius: 12px; /* Bordas arredondadas */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra para efeito de profundidade */
-    text-align: center; /* Centraliza o texto */
-    margin: 20px; /* Espaçamento externo */
+    width: 90%; /* Largura de 90% para melhor adaptação em telas pequenas */
+    max-width: 400px;
+    padding: 20px; /* Padding menor para telas pequenas */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 15px;
 }
 
 /* Título */
 h2 {
-    margin-bottom: 20px; /* Espaço abaixo do título */
-    font-size: 1.8em; /* Tamanho da fonte */
-    color: #333; /* Cor do texto */
+    margin-bottom: 15px; /* Margem reduzida */
+    font-size: 1.5em; /* Tamanho menor em telas pequenas */
+    color: #333;
 }
 
 /* Inputs de formulário */
 input[type="email"],
 input[type="password"] {
-    width: 100%; /* Largura total */
-    padding: 12px; /* Espaçamento interno */
-    margin: 10px 0; /* Margem superior e inferior */
-    border: 1px solid #ccc; /* Borda cinza clara */
-    border-radius: 6px; /* Bordas arredondadas */
-    font-size: 1em; /* Tamanho da fonte */
-    box-sizing: border-box; /* Inclui o padding na largura total */
-    transition: border-color 0.3s; /* Transição suave da cor da borda */
+    width: 100%;
+    padding: 10px; /* Padding reduzido */
+    margin: 8px 0; /* Margem menor */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
 }
 
 input[type="email"]:focus,
 input[type="password"]:focus {
-    border-color: #4a90e2; /* Cor da borda ao focar */
-    outline: none; /* Remove o contorno padrão */
+    border-color: #4a90e2;
+    outline: none;
 }
 
 /* Botão de envio */
 button {
-    width: 100%; /* Largura total */
-    padding: 12px; /* Espaçamento interno */
-    background-color: #4a90e2; /* Cor de fundo */
-    border: none; /* Sem borda */
-    color: #fff; /* Cor do texto */
-    border-radius: 6px; /* Bordas arredondadas */
-    font-size: 1em; /* Tamanho da fonte */
-    font-weight: bold; /* Texto em negrito */
-    cursor: pointer; /* Indica que é clicável */
-    margin-top: 15px; /* Espaço superior */
-    transition: background-color 0.3s, transform 0.2s; /* Transição de cor e transformação */
+    width: 100%;
+    padding: 10px; /* Padding menor para telas pequenas */
+    background-color: #4a90e2;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px; /* Margem menor */
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #357abd; /* Cor de fundo ao passar o mouse */
+    background-color: #357abd;
 }
 
 button:active {
-    transform: scale(0.98); /* Reduz ligeiramente o botão ao clicar */
+    transform: scale(0.98);
 }
 
 /* Link para cadastro */
 .footer {
-    margin-top: 15px; /* Espaço superior */
-    font-size: 0.9em; /* Tamanho da fonte */
-    color: #555; /* Cor do texto */
+    margin-top: 10px; /* Margem menor */
+    font-size: 0.8em; /* Tamanho menor */
+    color: #555;
 }
 
 .footer a {
-    color: #4a90e2; /* Cor do link */
-    text-decoration: none; /* Remove o sublinhado */
-    font-weight: bold; /* Negrito */
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .footer a:hover {
-    text-decoration: underline; /* Sublinhado ao passar o mouse */
+    text-decoration: underline;
 }
 
 /* Login social */
 .social-login {
-    text-align: center; /* Centraliza os elementos */
-    margin-top: 20px; /* Espaço superior */
+    text-align: center;
+    margin-top: 15px; /* Margem menor */
 }
 
 .social-login a {
-    margin: 0 10px; /* Margem lateral */
+    margin: 0 8px; /* Margem lateral menor */
 }
 
 .social-login img {
-    width: 40px; /* Ajusta a largura da imagem */
-    height: auto; /* Altura automática para manter a proporção */
-    vertical-align: middle; /* Alinha verticalmente ao meio */
+    width: 35px; /* Tamanho reduzido */
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Media queries para telas maiores */
+@media (min-width: 600px) {
+    body {
+        flex-direction: row; /* Exibe o conteúdo em linha para telas maiores */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        padding: 30px; /* Aumenta o padding para telas maiores */
+        margin: 20px;
+    }
+
+    h2 {
+        font-size: 1.8em; /* Tamanho maior em telas maiores */
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 12px; /* Aumenta o padding */
+        margin-top: 15px;
+    }
+
+    .footer {
+        margin-top: 15px;
+        font-size: 0.9em; /* Tamanho maior */
+    }
+
+    .social-login img {
+        width: 40px; /* Tamanho aumentado */
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px; /* Aumenta o limite máximo */
+        padding: 40px; /* Padding extra para telas grandes */
+    }
+
+    h2 {
+        font-size: 2em; /* Tamanho do título maior */
+    }
+
+    button {
+        padding: 15px; /* Botões maiores */
+    }
 }
