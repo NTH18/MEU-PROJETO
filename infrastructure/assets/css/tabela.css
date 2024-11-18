@@ -1,139 +1,192 @@
-/* Estilos para a tabela */
+/* Estilos gerais - Mobile First */
 body {
-    font-family: Arial, sans-serif; /* Define a fonte do texto */
-    background-color: #f4f4f4; /* Cor de fundo da página */
-    margin: 0; /* Remove as margens padrão */
-    padding: 0; /* Remove o espaçamento padrão */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
 /* Container principal da página */
 .container {
-    width: 80%; /* Largura de 80% da página */
-    margin: 30px auto; /* Margem para centralizar e espaçamento superior */
-    padding: 20px; /* Espaçamento interno */
-    background-color: #fff; /* Cor de fundo branca */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    width: 95%; /* Largura de 95% para telas menores */
+    max-width: 800px; /* Limite de largura */
+    margin: 20px auto;
+    padding: 15px; /* Padding menor */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo do título */
 h2 {
-    text-align: center; /* Centraliza o título */
-    color: #007acc; /* Cor azul */
+    text-align: center;
+    color: #007acc;
+    font-size: 1.5em; /* Tamanho menor para mobile */
 }
 
 /* Barra de Pesquisa com Botão */
 .search-container {
-    display: flex; /* Exibe os elementos como flex */
-    justify-content: space-between; /* Espaça os elementos uniformemente */
-    margin-bottom: 20px; /* Espaçamento inferior */
+    display: flex;
+    flex-direction: column; /* Empilha os elementos em telas menores */
+    gap: 10px; /* Espaçamento entre elementos */
+    margin-bottom: 15px;
 }
 
 /* Estilo do campo de pesquisa */
 #search {
-    width: 80%; /* Largura de 80% do container */
-    padding: 12px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    border: 1px solid #ddd; /* Borda cinza clara */
-    font-size: 16px; /* Tamanho da fonte */
+    width: 100%; /* Largura total */
+    padding: 10px; /* Padding menor */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px; /* Tamanho de fonte menor */
 }
 
 /* Estilo do botão de pesquisa */
 #search-btn {
-    padding: 12px 20px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    border: 1px solid #ddd; /* Borda */
-    background-color: #007acc; /* Cor de fundo azul */
-    color: white; /* Cor do texto */
-    cursor: pointer; /* Indicador de clicável */
-    font-size: 16px; /* Tamanho da fonte */
+    padding: 10px 15px; /* Padding reduzido */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #007acc;
+    color: white;
+    cursor: pointer;
+    font-size: 14px; /* Tamanho de fonte menor */
 }
 
-/* Efeito hover para o botão de pesquisa */
 #search-btn:hover {
-    background-color: #005a8d; /* Tom de azul mais escuro */
+    background-color: #005a8d;
 }
 
 /* Container do botão para cadastrar usuário */
 .add-user-container {
-    text-align: right; /* Alinha o botão à direita */
-    margin-bottom: 15px; /* Espaçamento inferior */
+    text-align: right;
+    margin-bottom: 10px;
 }
 
 /* Estilo do botão de adicionar usuário */
 #add-user-btn {
-    padding: 12px 20px; /* Espaçamento interno */
-    background-color: #4caf50; /* Cor de fundo verde */
-    color: white; /* Cor do texto */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Indicador de clicável */
-    font-size: 16px; /* Tamanho da fonte */
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
-/* Efeito hover para o botão de adicionar usuário */
 #add-user-btn:hover {
-    background-color: #45a049; /* Tom de verde mais escuro */
+    background-color: #45a049;
 }
 
 /* Estilo para a tabela */
 table {
     width: 100%; /* Ocupa toda a largura do container */
-    border-collapse: collapse; /* Remove o espaçamento entre bordas */
-    margin-top: 20px; /* Espaçamento superior */
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px; /* Tamanho de fonte menor */
 }
 
-/* Estilo das células da tabela */
 th, td {
-    padding: 12px; /* Espaçamento interno */
-    text-align: left; /* Alinhamento à esquerda */
-    border-bottom: 1px solid #ddd; /* Linha de divisão entre as células */
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-/* Estilo dos cabeçalhos da tabela */
 th {
-    background-color: #007acc; /* Cor de fundo azul */
-    color: white; /* Cor do texto branco */
+    background-color: #007acc;
+    color: white;
 }
 
-/* Estilo das linhas da tabela */
 tr {
-    background-color: #fff; /* Cor de fundo branca */
-    transition: background-color 0.3s; /* Transição suave de cor */
+    background-color: #fff;
+    transition: background-color 0.3s;
 }
 
-/* Efeito hover para as linhas da tabela */
 tr:hover {
-    background-color: #f9f9f9; /* Cor de fundo cinza claro ao passar o mouse */
+    background-color: #f9f9f9;
 }
 
-/* Estilo dos botões de ação (Editar e Excluir) */
+/* Botões de ação */
 button {
-    padding: 8px 16px; /* Espaçamento interno */
-    margin-right: 5px; /* Margem à direita */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Indicador de clicável */
+    padding: 6px 12px; /* Padding reduzido */
+    margin-right: 3px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px; /* Tamanho de fonte menor */
 }
 
-/* Estilo específico para o botão de edição */
 .edit-btn {
-    background-color: #4caf50; /* Cor de fundo verde */
-    color: white; /* Cor do texto */
+    background-color: #4caf50;
+    color: white;
 }
 
-/* Efeito hover para o botão de edição */
 .edit-btn:hover {
-    background-color: #45a049; /* Tom de verde mais escuro */
+    background-color: #45a049;
 }
 
-/* Estilo específico para o botão de exclusão */
 .delete-btn {
-    background-color: #f44336; /* Cor de fundo vermelho */
-    color: white; /* Cor do texto */
+    background-color: #f44336;
+    color: white;
 }
 
-/* Efeito hover para o botão de exclusão */
 .delete-btn:hover {
-    background-color: #da190b; /* Tom de vermelho mais escuro */
+    background-color: #da190b;
+}
+
+/* Media queries para telas maiores */
+@media (min-width: 600px) {
+    .container {
+        width: 80%; /* Largura maior */
+        padding: 20px; /* Padding aumentado */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Título maior */
+    }
+
+    #search {
+        font-size: 16px; /* Fonte maior */
+    }
+
+    #search-btn,
+    #add-user-btn {
+        font-size: 16px; /* Fonte maior */
+    }
+
+    button {
+        font-size: 14px; /* Fonte maior */
+    }
+}
+
+@media (min-width: 768px) {
+    .search-container {
+        flex-direction: row; /* Coloca os elementos em linha */
+        align-items: center; /* Centraliza verticalmente */
+    }
+
+    #search {
+        width: 85%; /* Ajusta a largura */
+    }
+
+    #search-btn {
+        width: auto; /* Ajusta a largura automática */
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1000px; /* Aumenta a largura máxima */
+    }
+
+    h2 {
+        font-size: 2em; /* Título maior */
+    }
+
+    table {
+        font-size: 16px; /* Tabela com fonte maior */
+    }
+
+    th, td {
+        padding: 15px; /* Padding aumentado */
+    }
 }
