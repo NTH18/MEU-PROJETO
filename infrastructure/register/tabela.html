@@ -8,27 +8,36 @@
     <title>Tabela</title> <!-- Título da página que aparece na aba do navegador -->
     <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
     <!-- Ícone que aparece na aba do navegador -->
-    <link rel="stylesheet" href="../assets/css/tabela.css"> <!-- Link para o arquivo CSS que estiliza a página -->
+    <!-- Link para o Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link para o arquivo CSS personalizado -->
+    <link rel="stylesheet" href="../assets/css/tabela.css">
 </head>
 
-<body>
-    <div class="container"> <!-- Container principal para organizar o layout da página -->
-        <h2>Usuários Cadastrados</h2> <!-- Título da página -->
+<body class="bg-light"> <!-- Classe bg-light do Bootstrap para fundo claro -->
+    <div class="container my-5"> <!-- Container principal que organiza o layout da página -->
+        <h2 class="text-center mb-4">Usuários Cadastrados</h2> <!-- Título da página -->
 
         <!-- Barra de Pesquisa com Botão -->
-        <div class="search-container"> <!-- Div que contém a barra de pesquisa e o botão -->
-            <input type="text" id="search" placeholder="Pesquisar por nome ou código de login">
-            <!-- Campo de entrada para pesquisa -->
-            <button id="search-btn">Pesquisar</button> <!-- Botão para iniciar a pesquisa -->
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <input type="text" id="search" class="form-control" placeholder="Pesquisar por nome ou código de login">
+                <!-- Campo de entrada para pesquisa -->
+            </div>
+            <div class="col-md-4">
+                <button id="search-btn" class="btn btn-primary w-100">Pesquisar</button>
+                <!-- Botão para iniciar a pesquisa -->
+            </div>
         </div>
 
         <!-- Botão para cadastrar usuários -->
-        <div class="add-user-container"> <!-- Div que contém o botão de cadastro -->
-            <button id="add-user-btn">Cadastrar Usuário</button> <!-- Botão para adicionar um novo usuário -->
+        <div class="text-end mb-3">
+            <button id="add-user-btn" class="btn btn-success">Cadastrar Usuário</button>
         </div>
 
-        <table> <!-- Início da tabela -->
-            <thead> <!-- Cabeçalho da tabela -->
+        <!-- Tabela de Usuários -->
+        <table class="table table-striped table-bordered"> <!-- Usando classes do Bootstrap para tabelas -->
+            <thead class="thead-dark">
                 <tr>
                     <th>Nome</th> <!-- Coluna para o nome do usuário -->
                     <th>Código de Login</th> <!-- Coluna para o código de login -->
@@ -37,7 +46,7 @@
                     <th>Ações</th> <!-- Coluna para botões de ações (editar/excluir) -->
                 </tr>
             </thead>
-            <tbody> <!-- Corpo da tabela onde os dados dos usuários são exibidos -->
+            <tbody>
                 <!-- Exemplo de uma linha de dados -->
                 <tr>
                     <td>Nathan Barreto</td> <!-- Nome do usuário -->
@@ -45,8 +54,8 @@
                     <td>Administrador do sistema</td> <!-- Descrição do usuário -->
                     <td>Fornecedor XYZ</td> <!-- Nome do fornecedor associado -->
                     <td>
-                        <button class="edit-btn">Editar</button> <!-- Botão para editar o registro -->
-                        <button class="delete-btn">Excluir</button> <!-- Botão para excluir o registro -->
+                        <button class="btn btn-warning btn-sm edit-btn">Editar</button>
+                        <button class="btn btn-danger btn-sm delete-btn">Excluir</button>
                     </td>
                 </tr>
                 <tr>
@@ -55,14 +64,17 @@
                     <td>Assistente de TI</td> <!-- Descrição do usuário -->
                     <td>Fornecedor ABC</td> <!-- Nome do fornecedor associado -->
                     <td>
-                        <button class="edit-btn">Editar</button> <!-- Botão para editar o registro -->
-                        <button class="delete-btn">Excluir</button> <!-- Botão para excluir o registro -->
+                        <button class="btn btn-warning btn-sm edit-btn">Editar</button>
+                        <button class="btn btn-danger btn-sm delete-btn">Excluir</button>
                     </td>
                 </tr>
                 <!-- Mais linhas podem ser adicionadas aqui -->
             </tbody>
         </table>
     </div>
+
+    <!-- Link para o Bootstrap JS (opcional, se você precisar de funcionalidades como modais, tooltips, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

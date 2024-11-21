@@ -1,46 +1,61 @@
 <!DOCTYPE html>
-<html lang="pt-BR"> <!-- Define o idioma da página como Português do Brasil -->
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva para dispositivos móveis -->
-    <title>Login</title> <!-- Título da página que aparece na aba do navegador -->
-    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon"> <!-- Ícone que aparece na aba do navegador -->
-    <link rel="stylesheet" href="../assets/css/login.css"> <!-- Link para o arquivo CSS que estiliza a página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Link para o Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Link para o CSS personalizado -->
+    <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 
-<body>
-    <div class="container"> <!-- Container principal que envolve todo o conteúdo da página -->
-        <h2>Login</h2> <!-- Título da seção de login -->
+<body class="bg-light">
+    <div class="container d-flex flex-column align-items-center justify-content-center vh-100">
+        <div class="card p-4 shadow-sm" style="max-width: 400px; width: 100%;">
+            <h2 class="text-center mb-4">Login</h2>
 
-        <!-- Formulário de login -->
-        <form action="../register/tabela.html" method="get"> <!-- Formulário que redireciona para tabela.html após o envio -->
-            <input type="email" placeholder="Digite seu e-mail" required> <!-- Campo de entrada de e-mail, obrigatório, com validação de formato de e-mail -->
-            <input type="password" placeholder="Digite sua senha" required 
-                   pattern=".{6,18}" 
-                   title="A senha deve ter entre 6 e 18 caracteres."> <!-- Mensagem de ajuda exibida em caso de falha na validação -->
-            <button type="submit">Entrar</button> <!-- Botão de envio do formulário -->
-        </form>
+            <!-- Formulário de login -->
+            <form action="../register/tabela.html" method="get">
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Digite sua senha"
+                        pattern=".{6,18}" title="A senha deve ter entre 6 e 18 caracteres." required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            </form>
 
-        <!-- Seção para login social -->
-        <div class="social-login">
-            <p>Ou entre com:</p> <!-- Texto que introduz as opções de login social -->
-            <a href=""> <!-- Link de login com o Google -->
-                <img src="../assets/images/google.png" alt="Login com Google"> <!-- Imagem de login com o Google -->
-            </a>
-            <a href=""> <!-- Link de login com o Facebook -->
-                <img src="../assets/images/facebook.png" alt="Login com Facebook"> <!-- Imagem de login com o Facebook -->
-            </a>
-            <a href=""> <!-- Link de login com a Apple -->
-                <img src="../assets/images/apple.png" alt="Login com Apple"> <!-- Imagem de login com a Apple -->
-            </a>
-        </div>
+            <!-- Seção para login social -->
+            <div class="social-login text-center mt-4">
+                <p class="mb-2">Ou entre com:</p>
+                <div class="d-flex justify-content-around">
+                    <a href="#" class="d-block">
+                        <img src="../assets/images/google.png" alt="Login com Google" class="img-fluid" style="width: 40px;">
+                    </a>
+                    <a href="#" class="d-block">
+                        <img src="../assets/images/facebook.png" alt="Login com Facebook" class="img-fluid" style="width: 40px;">
+                    </a>
+                    <a href="#" class="d-block">
+                        <img src="../assets/images/apple.png" alt="Login com Apple" class="img-fluid" style="width: 40px;">
+                    </a>
+                </div>
+            </div>
 
-        <!-- Seção de rodapé -->
-        <div class="footer">
-            <p>Não tem uma conta? <a href="../register/cadastro.html">Cadastre-se aqui</a></p> <!-- Link para a página de cadastro -->
+            <!-- Seção de rodapé -->
+            <div class="footer text-center mt-3">
+                <p>Não tem uma conta? <a href="../register/cadastro.html" class="text-decoration-none">Cadastre-se aqui</a></p>
+            </div>
         </div>
     </div>
+
+    <!-- Script do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

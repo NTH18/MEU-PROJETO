@@ -104,7 +104,7 @@ button:active {
     vertical-align: middle;
 }
 
-/* Media queries para telas maioress */
+/* Media queries para telas maiores */
 @media (min-width: 600px) {
     body {
         flex-direction: row; /* Exibe o conteúdo em linha para telas maiores */
@@ -149,5 +149,25 @@ button:active {
 
     button {
         padding: 15px; /* Botões maiores */
+    }
+
+    .social-login img {
+        width: 45px; /* Aumenta os ícones */
+    }
+}
+
+/* Adiciona um espaçamento adicional para telas de desktop */
+@media (min-width: 1024px) {
+    .container {
+        width: 80%; /* Para telas maiores, o formulário ocupa menos espaço */
+        max-width: 700px; /* Limite maior para desktops */
+    }
+
+    button {
+        font-size: 1.2em; /* Aumenta o tamanho da fonte do botão */
+    }
+
+    h2 {
+        font-size: 2.2em; /* Aumenta o título para telas grandes */
     }
 }
